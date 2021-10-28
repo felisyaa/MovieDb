@@ -4,10 +4,15 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/activity_mainmenu.xml" value="0.22" />
         <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/activity_moviedesc.xml" value="0.22" />
         <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/activity_moviedetail.xml" value="0.16530797101449277" />
         <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/activity_nowplaying.xml" value="0.16666666666666666" />
         <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/cardnowplaying.xml" value="0.22" />
+        <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/fragment_movie_details.xml" value="0.1897644927536232" />
+        <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/fragment_now_playing.xml" value="0.19270833333333334" />
+        <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/layout/fragment_up_coming.xml" value="0.19270833333333334" />
+        <entry key="..\:/Users/felisya/AndroidStudioProjects/moviedb/app/src/main/res/menu/main_menu.xml" value="0.19270833333333334" />
       </map>
     </option>
   </component>
