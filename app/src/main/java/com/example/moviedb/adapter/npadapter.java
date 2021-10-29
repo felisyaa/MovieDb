@@ -48,18 +48,18 @@ public class npadapter extends RecyclerView.Adapter<npadapter.npholder> {
         holder.desc.setText(results.getOverview());
         holder.textView4.setText(results.getRelease_date());
         Glide.with(context).load(Const.IMG_URL+results.getPoster_path()).into(holder.poster);
-        holder.cv.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+//        holder.cv.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
 //                Intent intent=new Intent(context, moviedesc.class);
 //                intent.putExtra("movie_id", ""+results.getId());
 //                context.startActivity(intent);
-
-                Bundle bundle=new Bundle();
-                bundle.putString("movieId", ""+results.getId());
-                Navigation.findNavController(v).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
-            }
-        });
+//
+//                Bundle bundle=new Bundle();
+//                bundle.putString("movieId", ""+results.getId());
+//                Navigation.findNavController(v).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
+//            }
+//        });
 
     }
 

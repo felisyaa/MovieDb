@@ -5,6 +5,7 @@ import android.os.Bundle;
 import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProvider;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -14,6 +15,7 @@ import android.view.ViewGroup;
 
 import com.example.moviedb.R;
 import com.example.moviedb.adapter.npadapter;
+import com.example.moviedb.helper.itemClickSupport;
 import com.example.moviedb.model.np;
 import com.example.moviedb.view.activities.nowplaying;
 import com.example.moviedb.viewmodel.movieviewmodel;
@@ -89,6 +91,15 @@ public class NowPlayingFragment extends Fragment {
             npadapter adapter=new npadapter(getActivity());
             adapter.setListnp(np.getResults());
             rv.setAdapter(adapter);
+
+            itemClickSupport.addTo(rv).setOnItemClickListener(new itemClickSupport.OnItemClickListener() {
+                @Override
+                public void onItemClicked(RecyclerView recyclerView, int position, View v) {
+                    Bundle bundle=new Bundle();
+                    bundle.putString("movieId", ""+np.getResults().get(position).getId());
+                    Navigation.findNavController(v).navigate(R.id.action_nowPlayingFragment_to_movieDetailsFragment, bundle);
+                }
+            });
         }
     };
 }
