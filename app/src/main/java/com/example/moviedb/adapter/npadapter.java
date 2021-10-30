@@ -1,8 +1,6 @@
 package com.example.moviedb.adapter;
 
 import android.content.Context;
-import android.content.Intent;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,14 +9,12 @@ import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.cardview.widget.CardView;
-import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.example.moviedb.R;
 import com.example.moviedb.helper.Const;
 import com.example.moviedb.model.np;
-import com.example.moviedb.view.activities.moviedesc;
 
 import java.util.List;
 
@@ -75,11 +71,11 @@ public class npadapter extends RecyclerView.Adapter<npadapter.npholder> {
 
         public npholder(@NonNull View itemView) {
             super(itemView);
-            poster=itemView.findViewById(R.id.poster);
-            titulo=itemView.findViewById(R.id.titulo);
-            desc=itemView.findViewById(R.id.desc);
-            textView4=itemView.findViewById(R.id.textView4);
-            cv=itemView.findViewById(R.id.cvnp);
+            poster=itemView.findViewById(R.id.posteruc);
+            titulo=itemView.findViewById(R.id.titulouc);
+            desc=itemView.findViewById(R.id.descuc);
+            textView4=itemView.findViewById(R.id.textView4uc);
+            cv=itemView.findViewById(R.id.cvuc);
         }
     }
 }

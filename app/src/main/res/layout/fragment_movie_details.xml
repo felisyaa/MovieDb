@@ -8,8 +8,8 @@
     tools:context=".view.activities.moviedesc">
 
     <androidx.cardview.widget.CardView
-        android:layout_width="0dp"
-        android:layout_height="500dp"
+        android:layout_width="362dp"
+        android:layout_height="627dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="32dp"
         android:layout_marginEnd="16dp"
@@ -25,13 +25,13 @@
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cons"
             android:layout_width="match_parent"
-            android:layout_height="500dp">
+            android:layout_height="match_parent">
 
             <TextView
                 android:id="@+id/judul"
-                android:layout_width="217dp"
-                android:layout_height="66dp"
-                android:layout_marginEnd="16dp"
+                android:layout_width="200dp"
+                android:layout_height="64dp"
+                android:layout_marginEnd="12dp"
                 android:maxLines="2"
                 android:text="Titulo"
                 android:textColor="#00796B"
@@ -54,8 +54,8 @@
                 android:id="@+id/rating"
                 android:layout_width="124dp"
                 android:layout_height="25dp"
-                android:layout_marginEnd="108dp"
-                android:layout_marginBottom="80dp"
+                android:layout_marginEnd="88dp"
+                android:layout_marginBottom="204dp"
                 android:text="TextView"
                 android:textColor="#009688"
                 android:textSize="16sp"
@@ -74,6 +74,27 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.494"
                 app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/popular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="148dp"
+                android:text="TextView"
+                android:textColor="#009688"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rating" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="362dp"
+                android:layout_height="251dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@android:drawable/ic_menu_report_image" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
