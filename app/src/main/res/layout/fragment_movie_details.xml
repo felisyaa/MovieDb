@@ -27,11 +27,21 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
+            <ImageView
+                android:id="@+id/bd"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
             <TextView
                 android:id="@+id/judul"
                 android:layout_width="200dp"
-                android:layout_height="64dp"
+                android:layout_height="wrap_content"
                 android:layout_marginEnd="12dp"
+                android:background="#4DB6AC"
                 android:maxLines="2"
                 android:text="Titulo"
                 android:textColor="#00796B"
@@ -44,59 +54,104 @@
                 android:id="@+id/poto"
                 android:layout_width="122dp"
                 android:layout_height="165dp"
-                android:layout_marginStart="16dp"
-                android:layout_marginTop="24dp"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="76dp"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@android:drawable/ic_menu_gallery" />
 
             <TextView
                 android:id="@+id/rating"
-                android:layout_width="124dp"
-                android:layout_height="25dp"
-                android:layout_marginEnd="88dp"
-                android:layout_marginBottom="204dp"
-                android:text="TextView"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginEnd="8dp"
+                android:background="#4DB6AC"
+                android:text="avg rate"
+                android:textAlignment="viewStart"
                 android:textColor="#009688"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toTopOf="@+id/des"
-                app:layout_constraintEnd_toEndOf="parent" />
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/judul"
+                app:layout_constraintTop_toBottomOf="@+id/judul"
+                tools:layout_constraintStart_toStartOf="@id/judul" />
 
             <TextView
                 android:id="@+id/des"
-                android:layout_width="338dp"
-                android:layout_height="257dp"
-                android:layout_marginBottom="32dp"
-                android:text="TextView"
+                android:layout_width="341dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="desc"
                 android:textColor="#009688"
                 android:textSize="16sp"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintHorizontal_bias="0.494"
-                app:layout_constraintStart_toStartOf="parent" />
+                app:layout_constraintHorizontal_bias="0.571"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/poto" />
 
             <TextView
                 android:id="@+id/popular"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="12dp"
-                android:layout_marginEnd="148dp"
-                android:text="TextView"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#4DB6AC"
+                android:text="popularity"
                 android:textColor="#009688"
                 android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/rating" />
+                app:layout_constraintStart_toStartOf="@id/judul"
+                app:layout_constraintTop_toBottomOf="@+id/rating"
+                tools:layout_constraintStart_toStartOf="@id/judul" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="362dp"
-                android:layout_height="251dp"
+            <TextView
+                android:id="@+id/release"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#4DB6AC"
+                android:text="release"
+                android:textColor="#009688"
+                android:textSize="16sp"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:srcCompat="@android:drawable/ic_menu_report_image" />
+                app:layout_constraintStart_toStartOf="@id/judul"
+                app:layout_constraintTop_toBottomOf="@+id/popular" />
+
+            <TextView
+                android:id="@+id/genres"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:background="#4DB6AC"
+                android:backgroundTintMode="add"
+                android:text="genres"
+                android:textColor="#009688"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@id/judul"
+                app:layout_constraintTop_toBottomOf="@+id/release" />
+
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/des"
+                app:layout_constraintStart_toStartOf="@+id/des">
+
+                <LinearLayout
+                    android:id="@+id/ll_productionName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal" />
+            </HorizontalScrollView>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

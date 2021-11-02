@@ -2,6 +2,7 @@ package com.example.moviedb.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
+import android.view.View;
 
 import java.util.List;
 

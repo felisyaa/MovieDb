@@ -21,11 +21,6 @@ import com.example.moviedb.model.np;
 import com.example.moviedb.model.uc;
 import com.example.moviedb.viewmodel.movieviewmodel;
 
-/**
- * A simple {@link Fragment} subclass.
- * Use the {@link upComingFragment#newInstance} factory method to
- * create an instance of this fragment.
- */
 public class upComingFragment extends Fragment {
 
     // TODO: Rename parameter arguments, choose names that match
@@ -41,14 +36,6 @@ public class upComingFragment extends Fragment {
         // Required empty public constructor
     }
 
-    /**
-     * Use this factory method to create a new instance of
-     * this fragment using the provided parameters.
-     *
-     * @param param1 Parameter 1.
-     * @param param2 Parameter 2.
-     * @return A new instance of fragment upComingFragment.
-     */
     // TODO: Rename and change types and number of parameters
     public static upComingFragment newInstance(String param1, String param2) {
         upComingFragment fragment = new upComingFragment();
@@ -79,7 +66,7 @@ public class upComingFragment extends Fragment {
         rv=view.findViewById(R.id.rvuc);
         view_model=new ViewModelProvider(getActivity()).get(movieviewmodel.class);
         view_model.getUpComing();
-        view_model.getResultUpComing().observe(getActivity(),showUpComing);
+        view_model.getResultUpComing().observe(getActivity(), showUpComing);
 
         return view;
     }
@@ -102,5 +89,4 @@ public class upComingFragment extends Fragment {
             });
         }
     };
-
 }
